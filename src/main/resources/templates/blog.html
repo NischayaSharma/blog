@@ -1,0 +1,19 @@
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title th:text="${title}"></title>
+</head>
+
+<body>
+
+    <h1 th:text="${title}"></h1>
+
+    <form action="/" th:action="@{/}" th:object="${blog}" method="post">
+        <p>Name: <input type="text" th:field="*{author}"></p>
+        <p>Content: <input type="text" th:field="*{content}"></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>
+
+</body>
+
+</html>
